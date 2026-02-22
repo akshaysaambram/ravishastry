@@ -33,42 +33,40 @@ export function Menu() {
 
   return (
     <motion.nav
-      className="border-b"
+      className="border-b px-4 sticky top-0 z-50 backdrop-blur"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
-          <div className="flex items-center">
-            <Link href="/" className="text-lg font-bold">
-              Ravi Shastry
-            </Link>
-          </div>
-          <div className="hidden md:block">
-            <div className="flex items-center space-x-4">
-              {menuItems.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <Button
-                    key={item.name}
-                    variant={pathname === item.href ? "default" : "ghost"}
-                    asChild
-                  >
-                    <Link
-                      href={item.href as Route}
-                      className="flex items-center space-x-2"
-                    >
-                      <Icon className="size-4" />
-                      <span>{item.name}</span>
-                    </Link>
-                  </Button>
-                );
-              })}
-            </div>
-          </div>
-          <MobileMenu />
+      <div className="flex container mx-auto h-16 items-center justify-between">
+        <div className="flex items-center">
+          <Link href="/" className="text-lg font-bold">
+            Ravi Shastry
+          </Link>
         </div>
+        <div className="hidden md:block">
+          <div className="flex items-center space-x-4">
+            {menuItems.map((item) => {
+              const Icon = item.icon;
+              return (
+                <Button
+                  key={item.name}
+                  variant={pathname === item.href ? "default" : "ghost"}
+                  asChild
+                >
+                  <Link
+                    href={item.href as Route}
+                    className="flex items-center space-x-2"
+                  >
+                    <Icon className="size-4" />
+                    <span>{item.name}</span>
+                  </Link>
+                </Button>
+              );
+            })}
+          </div>
+        </div>
+        <MobileMenu />
       </div>
     </motion.nav>
   );

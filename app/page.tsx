@@ -1,4 +1,7 @@
+import { About } from "@/components/about";
 import { CTA } from "@/components/cta";
+import { Reviews } from "@/components/reviews";
+import { Services } from "@/components/services";
 import { ShimmerButton } from "@/components/shimmer-button";
 import { Button } from "@/components/ui/button";
 import { CloudOrbit, OrbitingImage } from "@/components/ui/cloud-orbit";
@@ -120,13 +123,13 @@ const orbitingImagesData = [
 
 export default function Home() {
   return (
-    <div className="container mx-auto">
+    <>
       <div className="h-svh grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="h-full flex flex-col justify-center">
-          <h1 className="text-4xl font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl mb-4">
             Discover Your Cosmic Blueprint
           </h1>
-          <p className="text-lg mb-6">
+          <p className="text-lg mb-6 text-muted-foreground">
             Unveil the secrets of the stars and planets with our personalized
             astrology readings. Explore your unique cosmic blueprint and gain
             insights into your personality, relationships, and future.
@@ -168,7 +171,10 @@ export default function Home() {
           ))}
         </CloudOrbit>
       </div>
+      <About />
+      <Services />
       <CTA />
-    </div>
+      <Reviews />
+    </>
   );
 }

@@ -27,10 +27,10 @@ export default function RootLayout({ children }: Readonly<LayoutProps<"/">>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} relative antialiased`}
       >
-        <div className="min-h-svh">
-          <Menu />
+        <Menu />
+        <div className="min-h-svh container mx-auto space-y-12">
           {children}
           <Footer />
 
