@@ -8,14 +8,14 @@ export function About() {
         <h2 className="text-4xl md:text-5xl">Guided by Ancient Wisdom</h2>
 
         <p className="text-lg text-muted-foreground leading-relaxed">
-          With over 20 years of experience in Vedic astrology, Ravi Shastry
+          With over 22+ years of experience in M.A. Jyothishyam, Ravi Shastry
           provides deeply personalized guidance for career, relationships, and
           life decisions.
         </p>
 
         <div className="grid grid-cols-3 gap-6 pt-6">
-          <Stat number="20+" label="Years Experience" />
-          <Stat number="5000+" label="Consultations" />
+          <Stat number="22+" label="Years Experience" />
+          <Stat number="500+" label="Consultations" />
           <Stat number="95%" label="Client Satisfaction" />
         </div>
       </div>

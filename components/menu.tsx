@@ -18,14 +18,14 @@ import { usePathname } from "next/navigation";
 export const menuItems = [
   { name: "Home", href: "/", icon: HomeIcon },
   { name: "About", href: "#about", icon: InfoIcon },
-  { name: "Services", href: "#services", icon: BriefcaseIcon },
+  { name: "Services", href: "/services", icon: BriefcaseIcon },
   { name: "Reviews", href: "#reviews", icon: StarsIcon },
   {
     name: "Gallery",
     href: "/gallery",
     icon: ImagesIcon,
   },
-  { name: "Contact", href: "#contact", icon: PhoneIcon },
+  { name: "Contact", href: "/contact", icon: PhoneIcon },
 ];
 
 export function Menu() {
@@ -40,8 +40,8 @@ export function Menu() {
     >
       <div className="flex container mx-auto h-16 items-center justify-between">
         <div className="flex items-center">
-          <Link href="/" className="text-lg font-bold">
-            Ravi Shastry
+          <Link href="/" className="text-lg">
+            ॐ Ravi Shastry
           </Link>
         </div>
         <div className="hidden md:block">

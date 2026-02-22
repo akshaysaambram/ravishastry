@@ -18,9 +18,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ravi Shastry | Astrologer",
+  title: "ॐ Ravi Shastry | Astrologer",
   description:
-    "Ravi Shastry, A skilled astrologer giving simple advice for career, love, and life.",
+    "ॐ Ravi Shastry, A skilled astrologer giving simple advice for career, love, and life.",
 };
 
 export default function RootLayout({ children }: Readonly<LayoutProps<"/">>) {

@@ -48,11 +48,11 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           <div className="space-y-8">
             <div className="flex items-center space-x-2">
-              <span className="text-lg font-bold">Ravi Shastry</span>
+              <span className="text-lg">ॐ Ravi Shastry</span>
             </div>
             <p className="text-muted-foreground text-sm">
-              Making astrology insights more accessible with our horoscopes mentors and personalized
-              guidance.
+              Making astrology insights more accessible with our horoscopes
+              mentors and personalized guidance.
             </p>
           </div>
           <div>
@@ -74,7 +74,8 @@ export function Footer() {
         <div className="mt-8 border-t pt-8">
           <div className="flex items-center justify-between">
             <p className="text-muted-foreground text-sm">
-              © {new Date().getFullYear()} Ravi Shastry | Astrologer. All rights reserved.
+              © {new Date().getFullYear()} Ravi Shastry | Astrologer. All rights
+              reserved.
             </p>
             <div className="flex space-x-6">
               {footerLinks.social.map((item) => {
@@ -85,7 +86,12 @@ export function Footer() {
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     <span className="sr-only">{item.name}</span>
-                    <Image src={item.icon} alt={item.name} width={24} height={24} />
+                    <Image
+                      src={item.icon}
+                      alt={item.name}
+                      width={24}
+                      height={24}
+                    />
                   </Link>
                 );
               })}

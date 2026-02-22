@@ -3,9 +3,17 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRightIcon } from "lucide-react";
 import { motion } from "motion/react";
+import { Route } from "next";
 import Link from "next/link";
 
-export function CTA() {
+type CTAProps = {
+  title: string;
+  desc: string;
+  buttonText: string;
+  buttonHref: string;
+};
+
+export function CTA({ title, desc, buttonText, buttonHref }: CTAProps) {
   return (
     <motion.section
       className="py-12"
@@ -34,7 +42,7 @@ export function CTA() {
             transition={{ delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Eager to know about your future?
+            {title}
           </motion.h2>
           <motion.p
             className="text-primary-foreground/80 mx-auto mt-4 max-w-2xl"
@@ -43,9 +51,7 @@ export function CTA() {
             transition={{ delay: 0.3 }}
             viewport={{ once: true }}
           >
-            Discover your future with our fortune teller. Get insights and
-            predictions about your life, love, career, and more. Start your
-            journey today!
+            {desc}
           </motion.p>
           <motion.div
             className="mt-8 flex justify-center gap-4"
@@ -55,8 +61,8 @@ export function CTA() {
             viewport={{ once: true }}
           >
             <Button size="lg" variant="secondary" className="group" asChild>
-              <Link href="#contact">
-                Get Started
+              <Link href={buttonHref as Route}>
+                {buttonText}
                 <ArrowRightIcon className="ml-2 size-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>

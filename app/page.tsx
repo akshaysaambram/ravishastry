@@ -3,6 +3,7 @@ import { CTA } from "@/components/cta";
 import { Reviews } from "@/components/reviews";
 import { Services } from "@/components/services";
 import { ShimmerButton } from "@/components/shimmer-button";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CloudOrbit, OrbitingImage } from "@/components/ui/cloud-orbit";
 
@@ -126,6 +127,7 @@ export default function Home() {
     <>
       <div className="h-svh grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="h-full flex flex-col justify-center">
+          <Badge>Vaidika Ratna Awardee</Badge>
           <h1 className="text-4xl md:text-5xl mb-4">
             Discover Your Cosmic Blueprint
           </h1>
@@ -173,7 +175,14 @@ export default function Home() {
       </div>
       <About />
       <Services />
-      <CTA />
+      <CTA
+        title="Eager to know about your future?"
+        desc="Discover your future with our fortune teller. Get insights and
+            predictions about your life, love, career, and more. Start your
+            journey today!"
+        buttonText="Get Started"
+        buttonHref="/contact"
+      />
       <Reviews />
     </>
   );
