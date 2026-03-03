@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "motion/react";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 interface Image {
   url: string;
@@ -16,7 +17,13 @@ interface CloudOrbitProps {
   size?: number;
   className?: string;
   images?: Image[];
-  [key: string]: string | number | boolean | React.ReactNode | Image[] | undefined;
+  [key: string]:
+    | string
+    | number
+    | boolean
+    | React.ReactNode
+    | Image[]
+    | undefined;
 }
 
 export function CloudOrbit({
@@ -40,7 +47,8 @@ export function CloudOrbit({
       }
 
       const elapsedTime = (timestamp - lastTimestamp.current) / 1000;
-      const currentImageIndex = Math.floor(elapsedTime / duration) % images.length;
+      const currentImageIndex =
+        Math.floor(elapsedTime / duration) % images.length;
 
       setCurrentIndex(currentImageIndex);
 
@@ -106,7 +114,13 @@ interface OrbitingImageProps {
   className?: string;
   images?: Image[];
   duration?: number;
-  [key: string]: string | number | boolean | React.ReactNode | Image[] | undefined;
+  [key: string]:
+    | string
+    | number
+    | boolean
+    | React.ReactNode
+    | Image[]
+    | undefined;
 }
 
 export function OrbitingImage({
@@ -131,7 +145,8 @@ export function OrbitingImage({
       }
 
       const elapsedTime = (timestamp - lastTimestamp.current) / 1000;
-      const currentImageIndex = Math.floor(elapsedTime / duration) % images.length;
+      const currentImageIndex =
+        Math.floor(elapsedTime / duration) % images.length;
 
       setCurrentIndex(currentImageIndex);
 
@@ -201,7 +216,7 @@ export function OrbitingImage({
                     className,
                   )}
                 >
-                  <img
+                  <Image
                     src={image.url}
                     alt={image.name}
                     className="flex h-full w-full items-center justify-center rounded-full object-contain"

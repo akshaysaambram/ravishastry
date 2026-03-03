@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function About() {
   return (
     <div
@@ -21,7 +23,7 @@ export function About() {
       </div>
 
       <div className="rounded-2xl overflow-hidden shadow-xl">
-        <img
+        <Image
           src="/images/gallery/1.jpeg"
           alt="Astrology Consultation"
           className="w-full h-full object-cover"

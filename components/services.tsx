@@ -36,7 +36,7 @@ export function Services() {
           <Card key={service.title} className="h-full overflow-hidden">
             <div className="relative h-48">
               <Image
-                src={service.image || "/placeholder.svg"}
+                src={service.image}
                 alt={service.title}
                 fill
                 className="object-cover"

@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
   basePath: isProd ? "/ravishastry" : undefined,
   assetPrefix: isProd ? "/ravishastry/" : undefined,
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
