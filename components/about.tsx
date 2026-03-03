@@ -22,7 +22,7 @@ export function About() {
 
       <div className="rounded-2xl overflow-hidden shadow-xl">
         <img
-          src="/about-astrology.jpg"
+          src="/images/gallery/1.jpeg"
           alt="Astrology Consultation"
           className="w-full h-full object-cover"
         />
@@ -34,7 +34,7 @@ export function About() {
 function Stat({ number, label }: { number: string; label: string }) {
   return (
     <div>
-      <p className="text-3xl font-semibold">{number}</p>
+      <p className="text-3xl font-semibold text-primary">{number}</p>
       <p className="text-sm text-muted-foreground">{label}</p>
     </div>
   );

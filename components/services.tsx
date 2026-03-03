@@ -8,22 +8,19 @@ const services = [
     title: "Gruha Praveshamu",
     description:
       "Traditional housewarming ritual performed to bring peace, prosperity, and positive energy into your new home.",
-    image:
-      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=80", // Hindu home ceremony
+    image: "/images/gallery/16.jpeg", // Hindu home ceremony
   },
   {
     title: "Vivahamu",
     description:
       "Sacred Vedic wedding ceremony conducted with proper rituals to bless the couple with harmony and lifelong happiness.",
-    image:
-      "https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=800&q=80", // Hindu wedding ritual
+    image: "/images/gallery/7.jpeg", // Hindu wedding ritual
   },
   {
     title: "Navagraha Shanthi Puja",
     description:
       "Special puja performed to balance planetary influences and remove obstacles caused by graha doshas.",
-    image:
-      "https://images.unsplash.com/photo-1610456331818-0f8c1e9bdfb1?auto=format&fit=crop&w=800&q=80", // Navagraha temple
+    image: "/images/gallery/3.jpeg", // Navagraha temple
   },
 ];
 
