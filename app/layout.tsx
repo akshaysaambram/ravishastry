@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { FloatingActions } from "@/components/floating-actions";
 import { Footer } from "@/components/footer";
 import { Menu } from "@/components/menu";
+import { Analytics } from "@vercel/analytics/next";
 
 import "./globals.css";
 
@@ -36,6 +37,8 @@ export default function RootLayout({ children }: Readonly<LayoutProps<"/">>) {
 
           <FloatingActions />
         </div>
+
+        <Analytics />
       </body>
     </html>
   );
