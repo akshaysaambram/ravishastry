@@ -42,7 +42,7 @@ export function LanguageSwitcher() {
       onValueChange={changeLanguage}
       disabled={isPending}
     >
-      <SelectTrigger className="w-35">
+      <SelectTrigger className="w-full">
         <SelectValue placeholder="Language" />
       </SelectTrigger>
 

@@ -1,5 +1,6 @@
 "use client";
 
+import { LanguageSwitcher } from "@/components/language-switcher";
 import { menuItems } from "@/components/menu";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -62,15 +63,11 @@ export function MobileMenu() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", bounce: 0, duration: 0.3 }}
-              className="bg-background fixed inset-y-0 right-0 z-50 w-full max-w-xs p-6 shadow-lg md:hidden"
+              className="bg-background fixed inset-y-0 right-0 z-50 w-full p-4 shadow-lg md:hidden"
             >
               <div className="flex items-center justify-between">
-                <Link
-                  href="/"
-                  className="text-lg font-bold"
-                  onClick={closeMenu}
-                >
-                  {t("name")}
+                <Link href="/" className="text-lg" onClick={closeMenu}>
+                  ॐ {t("name")}
                 </Link>
                 <Button
                   variant="ghost"
@@ -102,6 +99,9 @@ export function MobileMenu() {
                       );
                     })}
                   </nav>
+                </div>
+                <div className="w-full my-6">
+                  <LanguageSwitcher />
                 </div>
               </ScrollArea>
             </motion.div>

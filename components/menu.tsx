@@ -64,7 +64,9 @@ export function Menu() {
             );
           })}
         </div>
-        <LanguageSwitcher />
+        <div className="hidden md:block">
+          <LanguageSwitcher />
+        </div>
         <MobileMenu />
       </div>
     </motion.nav>

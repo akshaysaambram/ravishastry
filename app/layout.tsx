@@ -7,6 +7,7 @@ import { FloatingActions } from "@/components/floating-actions";
 import { Footer } from "@/components/footer";
 import { Menu } from "@/components/menu";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 
@@ -24,6 +25,9 @@ export const metadata: Metadata = {
   title: "ॐ Ravi Shastry | Astrologer",
   description:
     "ॐ Ravi Shastry, A skilled astrologer giving simple advice for career, love, and life.",
+  icons: {
+    icon: "/images/gallery/1.jpeg",
+  },
 };
 
 export default async function RootLayout({
@@ -39,7 +43,7 @@ export default async function RootLayout({
       >
         <NextIntlClientProvider messages={messages}>
           <Menu />
-          <div className="min-h-svh container mx-auto space-y-12">
+          <div className="min-h-svh container mx-auto px-4 space-y-12">
             {children}
             <Footer />
 
@@ -48,6 +52,7 @@ export default async function RootLayout({
         </NextIntlClientProvider>
 
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
