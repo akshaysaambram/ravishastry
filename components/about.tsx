@@ -28,8 +28,8 @@ export async function About() {
           src="/images/gallery/1.jpeg"
           alt="Astrology Consultation"
           className="w-full h-full object-cover"
-          width={0}
-          height={0}
+          width={600}
+          height={800}
         />
       </div>
     </div>
