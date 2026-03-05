@@ -8,6 +8,11 @@
       "Reviews": "Reviews",
       "Gallery": "Gallery",
       "Contact": "Contact"
+    },
+    "footer": {
+      "astrologer": "Astrologer.",
+      "all-rights-reserved": "All rights reserved.",
+      "desc": "Making astrology insights more accessible with our horoscopes mentors and personalized guidance."
     }
   },
   "hero": {
@@ -24,7 +29,37 @@
     "desc": "With over 22+ years of experience in M.A. Jyothishyam, Ravi Shastry provides deeply personalized guidance for career, relationships, and life decisions."
   },
   "services": {
-    "title": "Services Designed for Your Journey"
+    "title": "Our Services",
+    "desc": "Services Designed for Your Journey",
+    "enquire-now": "Enquire Now",
+    "view-all-services": "View All Services",
+    "services": [
+      {
+        "title": "Gruha Praveshamu",
+        "description": "Traditional housewarming ritual performed to bring peace, prosperity, and positive energy into your new home.",
+        "image": "/images/gallery/16.jpeg"
+      },
+      {
+        "title": "Vivahamu",
+        "description": "Sacred Vedic wedding ceremony conducted with proper rituals to bless the couple with harmony and lifelong happiness.",
+        "image": "/images/gallery/7.jpeg"
+      },
+      {
+        "title": "Vigraha Prathishta",
+        "description": "Divine idol installation ceremony performed with powerful mantras to energize and sanctify temples or homes.",
+        "image": "/images/gallery/4.jpeg"
+      },
+      {
+        "title": "Chandi Homam",
+        "description": "Powerful fire ritual dedicated to Goddess Durga for protection, strength, and removal of negative energies.",
+        "image": "/images/gallery/5.jpeg"
+      },
+      {
+        "title": "Navagraha Shanthi Puja",
+        "description": "Special puja performed to balance planetary influences and remove obstacles caused by graha doshas.",
+        "image": "/images/gallery/3.jpeg"
+      }
+    ]
   },
   "reviews": {
     "title": "Words from Our Clients"

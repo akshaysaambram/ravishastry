@@ -8,12 +8,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import {
-  MailIcon,
-  MapPinIcon,
-  MessageCircleWarningIcon,
-  PhoneIcon,
-} from "lucide-react";
+import { MapPinIcon, MessageCircleWarningIcon, PhoneIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -21,6 +17,8 @@ const fadeIn = {
 };
 
 export default function Contact() {
+  const t = useTranslations("app");
+
   return (
     <div className="container mx-auto py-8">
       <motion.div
@@ -31,7 +29,7 @@ export default function Contact() {
         className="text-center"
       >
         <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-          Contact Us
+          {t("menu.Contact")}
         </h1>
         <p className="text-muted-foreground mt-4">Get in touch</p>
       </motion.div>

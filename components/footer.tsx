@@ -53,10 +53,7 @@ export function Footer() {
             <div className="flex items-center space-x-2">
               <span className="text-lg">ॐ {t("name")}</span>
             </div>
-            <p className="text-muted-foreground text-sm">
-              Making astrology insights more accessible with our horoscopes
-              mentors and personalized guidance.
-            </p>
+            <p className="text-muted-foreground text-sm">{t("footer.desc")}</p>
           </div>
           <div>
             <h3 className="mb-4 text-sm font-semibold">Product</h3>
@@ -77,8 +74,8 @@ export function Footer() {
         <div className="mt-8 border-t pt-8">
           <div className="flex items-center justify-between">
             <p className="text-muted-foreground text-sm">
-              © {new Date().getFullYear()} {t("name")} | Astrologer. All rights
-              reserved.
+              © {new Date().getFullYear()} {t("name")} |{" "}
+              {t("footer.astrologer")} {t("footer.all-rights-reserved")}
             </p>
             <div className="flex space-x-6">
               {footerLinks.social.map((item) => {
