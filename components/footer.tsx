@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import type { Route } from "next";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -37,6 +38,8 @@ const footerLinks = {
 };
 
 export function Footer() {
+  const t = useTranslations("app");
+
   return (
     <motion.footer
       className="border-t container mx-auto"
@@ -48,7 +51,7 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           <div className="space-y-8">
             <div className="flex items-center space-x-2">
-              <span className="text-lg">ॐ Ravi Shastry</span>
+              <span className="text-lg">ॐ {t("name")}</span>
             </div>
             <p className="text-muted-foreground text-sm">
               Making astrology insights more accessible with our horoscopes
@@ -64,7 +67,7 @@ export function Footer() {
                     href={link.href as Route}
                     className="text-muted-foreground hover:text-primary text-sm transition-colors"
                   >
-                    {link.name}
+                    {t(`menu.${link.name}`)}
                   </Link>
                 </li>
               ))}
@@ -74,7 +77,7 @@ export function Footer() {
         <div className="mt-8 border-t pt-8">
           <div className="flex items-center justify-between">
             <p className="text-muted-foreground text-sm">
-              © {new Date().getFullYear()} Ravi Shastry | Astrologer. All rights
+              © {new Date().getFullYear()} {t("name")} | Astrologer. All rights
               reserved.
             </p>
             <div className="flex space-x-6">

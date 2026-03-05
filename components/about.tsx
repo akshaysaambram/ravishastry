@@ -1,18 +1,19 @@
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
-export function About() {
+export async function About() {
+  const t = await getTranslations("about");
+
   return (
     <div
       id="about"
       className="grid md:grid-cols-2 gap-12 space-y-12 items-center"
     >
       <div className="space-y-6">
-        <h2 className="text-4xl md:text-5xl">Guided by Ancient Wisdom</h2>
+        <h2 className="text-4xl md:text-5xl">{t("title")}</h2>
 
         <p className="text-lg text-muted-foreground leading-relaxed">
-          With over 22+ years of experience in M.A. Jyothishyam, Ravi Shastry
-          provides deeply personalized guidance for career, relationships, and
-          life decisions.
+          {t("desc")}
         </p>
 
         <div className="grid grid-cols-3 gap-6 pt-6">
@@ -27,6 +28,8 @@ export function About() {
           src="/images/gallery/1.jpeg"
           alt="Astrology Consultation"
           className="w-full h-full object-cover"
+          width={0}
+          height={0}
         />
       </div>
     </div>

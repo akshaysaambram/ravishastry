@@ -220,6 +220,8 @@ export function OrbitingImage({
                     src={image.url}
                     alt={image.name}
                     className="flex h-full w-full items-center justify-center rounded-full object-contain"
+                    width={0}
+                    height={0}
                   />
                 </motion.div>
               ),

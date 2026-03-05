@@ -6,6 +6,7 @@ import { ShimmerButton } from "@/components/shimmer-button";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CloudOrbit, OrbitingImage } from "@/components/ui/cloud-orbit";
+import { getTranslations } from "next-intl/server";
 
 const orbitingImagesData = [
   {
@@ -122,28 +123,24 @@ const orbitingImagesData = [
   },
 ];
 
-export default function Home() {
+export default async function Home() {
+  const t = await getTranslations("hero");
+
   return (
     <>
       <div className="h-svh grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="h-full flex flex-col justify-center">
-          <Badge>Vaidika Ratna Awardee</Badge>
-          <h1 className="text-4xl md:text-5xl mb-4">
-            Discover Your Cosmic Blueprint
-          </h1>
-          <p className="text-lg mb-6 text-muted-foreground">
-            Unveil the secrets of the stars and planets with our personalized
-            astrology readings. Explore your unique cosmic blueprint and gain
-            insights into your personality, relationships, and future.
-          </p>
+          <Badge>{t("badge")}</Badge>
+          <h1 className="text-4xl md:text-5xl mb-4">{t("title")}</h1>
+          <p className="text-lg mb-6 text-muted-foreground">{t("desc")}</p>
           <div className="flex items-center gap-4">
             <Button
               variant="outline"
               className="px-8 py-6 text-base rounded-full cursor-pointer transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
-              Get Started
+              {t("buttons.secondary")}
             </Button>
-            <ShimmerButton text="Book a call" />
+            <ShimmerButton text={t("buttons.primary")} />
           </div>
         </div>
         <CloudOrbit

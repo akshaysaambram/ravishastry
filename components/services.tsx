@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -24,12 +25,11 @@ const services = [
   },
 ];
 
-export function Services() {
+export async function Services() {
+  const t = await getTranslations("services");
   return (
     <div id="services" className="text-center space-y-12">
-      <h2 className="text-4xl md:text-5xl font-heading">
-        Services Designed for Your Journey
-      </h2>
+      <h2 className="text-4xl md:text-5xl font-heading">{t("title")}</h2>
 
       <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service) => (

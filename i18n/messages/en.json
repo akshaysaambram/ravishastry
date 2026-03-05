@@ -1,0 +1,32 @@
+{
+  "app": {
+    "name": "Ravi Shastry",
+    "menu": {
+      "Home": "Home",
+      "About": "About",
+      "Services": "Services",
+      "Reviews": "Reviews",
+      "Gallery": "Gallery",
+      "Contact": "Contact"
+    }
+  },
+  "hero": {
+    "badge": "Vaidika Ratna Awardee",
+    "title": "Discover Your Cosmic Blueprint",
+    "desc": "Unveil the secrets of the stars and planets with our personalized astrology readings. Explore your unique cosmic blueprint and gain insights into your personality, relationships, and future.",
+    "buttons": {
+      "primary": "Book a Call",
+      "secondary": "Get Started"
+    }
+  },
+  "about": {
+    "title": "Guided by Ancient Wisdom",
+    "desc": "With over 22+ years of experience in M.A. Jyothishyam, Ravi Shastry provides deeply personalized guidance for career, relationships, and life decisions."
+  },
+  "services": {
+    "title": "Services Designed for Your Journey"
+  },
+  "reviews": {
+    "title": "Words from Our Clients"
+  }
+}

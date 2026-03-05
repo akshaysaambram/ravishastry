@@ -6,13 +6,16 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import type { Route } from "next";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export function MobileMenu() {
-  const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const t = useTranslations("app");
+
+  const [isOpen, setIsOpen] = useState(false);
 
   // Cleanup on unmount to restore scroll
   useEffect(() => {
@@ -67,7 +70,7 @@ export function MobileMenu() {
                   className="text-lg font-bold"
                   onClick={closeMenu}
                 >
-                  Ravi Shastry
+                  {t("name")}
                 </Link>
                 <Button
                   variant="ghost"
@@ -93,7 +96,7 @@ export function MobileMenu() {
                         >
                           <Link href={item.href as Route} onClick={closeMenu}>
                             <item.icon className="mr-2 size-5" />
-                            {item.name}
+                            {t(`menu.${item.name}`)}
                           </Link>
                         </Button>
                       );

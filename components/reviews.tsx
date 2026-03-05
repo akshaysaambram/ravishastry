@@ -1,3 +1,5 @@
+import { getTranslations } from "next-intl/server";
+
 const reviews = [
   {
     name: "Anjali M.",
@@ -13,12 +15,12 @@ const reviews = [
   },
 ];
 
-export function Reviews() {
+export async function Reviews() {
+  const t = await getTranslations("reviews");
+
   return (
     <div id="reviews" className="text-center space-y-12">
-      <h2 className="text-4xl md:text-5xl font-heading">
-        Words from Our Clients
-      </h2>
+      <h2 className="text-4xl md:text-5xl font-heading">{t("title")}</h2>
 
       <div className="grid md:grid-cols-3 gap-8">
         {reviews.map((review) => (
