@@ -22,12 +22,66 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ॐ Ravi Shastry | Astrologer",
+  metadataBase: new URL("https://ravishastry.com"),
+
+  title: {
+    default: "ॐ Ravi Shastry | Astrologer",
+    template: "%s | Ravi Shastry Astrology",
+  },
+
   description:
     "ॐ Ravi Shastry, A skilled astrologer giving simple advice for career, love, and life.",
+
+  keywords: [
+    "Ravi Shastry astrologer",
+    "Vedic astrology",
+    "horoscope reading",
+    "career astrology",
+    "love astrology",
+    "kundli analysis",
+  ],
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
   icons: {
     icon: "/images/gallery/1.jpeg",
+    shortcut: "/images/gallery/1.jpeg",
   },
+
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://ravishastry.vercel.app",
+    title: "ॐ Ravi Shastry | Astrologer",
+    description:
+      "ॐ Ravi Shastry, A skilled astrologer giving simple advice for career, love, and life.",
+    siteName: "Ravi Shastry Astrology",
+    images: [
+      {
+        url: "/images/gallery/1.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Ravi Shastry Astrologer",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "ॐ Ravi Shastry | Astrologer",
+    description:
+      "ॐ Ravi Shastry, A skilled astrologer giving simple advice for career, love, and life.",
+    images: ["/images/gallery/1.jpeg"],
+  },
+
+  alternates: {
+    canonical: "https://ravishastry.vercel.app",
+  },
+
+  category: "Astrology",
 };
 
 export default async function RootLayout({

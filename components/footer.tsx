@@ -31,7 +31,7 @@ const footerLinks = {
     },
     {
       name: "YouTube",
-      href: "https://youtube.com/your-channel",
+      href: "https://youtube.com/@ravishastry2498?si=e2MYh4GjBNE5DwPS",
       icon: "/images/social/youtube.png",
     },
   ],
@@ -72,7 +72,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t pt-8">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col md:flex-row items-center justify-between">
             <p className="text-muted-foreground text-sm">
               © {new Date().getFullYear()} {t("name")} |{" "}
               {t("footer.astrologer")} {t("footer.all-rights-reserved")}
