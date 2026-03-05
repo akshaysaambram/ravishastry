@@ -33,6 +33,11 @@
     "desc": "Services Designed for Your Journey",
     "enquire-now": "Enquire Now",
     "view-all-services": "View All Services",
+    "cta": {
+      "title": "Need a Solution, Right Now?",
+      "desc": "We offer solutions to meet your specific requirements. Get in touch with me to discuss your future.",
+      "button": "Contact Us"
+    },
     "services": [
       {
         "title": "Gruha Praveshamu",
@@ -62,6 +67,25 @@
     ]
   },
   "reviews": {
-    "title": "Words from Our Clients"
+    "title": "Words from Our Clients",
+    "reviews": [
+      {
+        "name": "Anjali M.",
+        "text": "The predictions were accurate and gave me clarity about my career move."
+      },
+      {
+        "name": "Rahul S.",
+        "text": "His guidance completely changed how I approach relationships."
+      },
+      {
+        "name": "Priya K.",
+        "text": "A deeply insightful and comforting consultation experience."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Eager to know about your future?",
+    "desc": "Discover your future with our fortune teller. Get insights and predictions about your life, love, career, and more. Start your journey today!",
+    "button": "Get Started"
   }
 }

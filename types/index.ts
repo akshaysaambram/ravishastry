@@ -4,4 +4,9 @@ type Service = {
   image: string;
 };
 
-export type { Service };
+type Review = {
+  text: string;
+  name: string;
+}
+
+export type { Service, Review };

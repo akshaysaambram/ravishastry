@@ -82,11 +82,10 @@ export default function Services() {
       </motion.div>
 
       <CTA
-        title="Need a Solution, Right Now?"
-        desc="We offer solutions to meet your specific requirements. Get in touch
-          with me to discuss your future."
+        title={t("cta.title")}
+        desc={t("cta.desc")}
         buttonHref="/contact"
-        buttonText="Contact Us"
+        buttonText={t("cta.button")}
       />
     </div>
   );

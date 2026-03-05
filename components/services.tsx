@@ -14,7 +14,7 @@ export async function Services() {
       <h2 className="text-4xl md:text-5xl font-heading">{t("desc")}</h2>
 
       <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {services.slice(3).map((service) => (
+        {services.slice(2).map((service) => (
           <Card key={service.title} className="h-full overflow-hidden">
             <div className="relative h-48">
               <Image

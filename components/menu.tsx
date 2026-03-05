@@ -36,7 +36,7 @@ export function Menu() {
 
   return (
     <motion.nav
-      className="border-b px-4 sticky top-0 z-50 backdrop-blur"
+      className="border-b px-4 sticky top-0 z-50 bg-background"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
@@ -56,10 +56,7 @@ export function Menu() {
                 variant={pathname === item.href ? "default" : "ghost"}
                 asChild
               >
-                <Link
-                  href={item.href as Route}
-                  className="flex items-center"
-                >
+                <Link href={item.href as Route} className="flex items-center">
                   <Icon className="size-4" />
                   <span>{t(`menu.${item.name}`)}</span>
                 </Link>

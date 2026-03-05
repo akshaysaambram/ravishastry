@@ -1,22 +1,9 @@
+import { Review } from "@/types";
 import { getTranslations } from "next-intl/server";
-
-const reviews = [
-  {
-    name: "Anjali M.",
-    text: "The predictions were accurate and gave me clarity about my career move.",
-  },
-  {
-    name: "Rahul S.",
-    text: "His guidance completely changed how I approach relationships.",
-  },
-  {
-    name: "Priya K.",
-    text: "A deeply insightful and comforting consultation experience.",
-  },
-];
 
 export async function Reviews() {
   const t = await getTranslations("reviews");
+  const reviews: Review[] = t.raw("reviews");
 
   return (
     <div id="reviews" className="text-center space-y-12">
